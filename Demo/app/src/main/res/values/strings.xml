@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="login_text">Login</string>
+    <string name="login_label">Login your Account</string>
+    <string name="name_text">Enter your name</string>
+    <string name="password_text">Enter your password</string>
+    <string name="username_error_msg">You can not enter more then %1$s characters</string>
+    <string name="password_text_error_msg">You can not enter more then %1$s characters for password</string>
+    <string name="plant_scr_title">Get Plant Details</string>
+    <string name="user_profile_label">Get User Profile Data</string>
+    <string name="user_pass_empty_msg">Username and/or Password are Empty</string>
+    <string name="username_empty_msg">Username is Empty</string>
+    <string name="password_empty_msg">Password is Empty</string>
+    sername is Empty
+</resources>
