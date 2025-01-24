@@ -2,8 +2,10 @@ package com.example.demo.View
 
 import androidx.activity.compose.setContent
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -24,14 +26,11 @@ class UserDetailScreenKtTest {
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
-  private lateinit var navController: TestNavHostController
-
-    private lateinit var viewModel: HomeViewModel
+    private var viewModel = HomeViewModel()
 
     @Before
     fun setUp() {
-        // Mock our View Model to stub out calls later
-      //  viewModel = mock()
+        println("Before test case execution")
         // Render the Compose UI
         composeTestRule.activity.setContent {
             var navController = rememberNavController()
@@ -47,17 +46,21 @@ class UserDetailScreenKtTest {
 
     @After
     fun tearDown() {
+        println("After test case execution")
     }
 
     @Test
-    fun userDetailScreen() {
+    fun varifyLabelTest() {
 
         composeTestRule.onNodeWithText("Welcome: ").assertIsDisplayed()
-        takeScreenshot()
+        composeTestRule.onNodeWithText("Get Plant Details").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Get User Profile Data").assertIsDisplayed()
+        Thread.sleep(5000)
+        composeTestRule.onNodeWithText("Get User Profile Data").captureToImage()
+        //composeTestRule.onNodeWithText("Get Plant Details").performClick()
 
-    }
+     }
 
-    @Test
-    fun customRow() {
-    }
+
+
 }

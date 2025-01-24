@@ -1,23 +1,17 @@
 package com.example.demo.View
 
 import androidx.activity.compose.setContent
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.isDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.testing.TestNavHostController
 import androidx.test.core.app.takeScreenshot
 import com.example.demo.Activity.MainActivity
 import com.example.demo.UtillClass.Screen
-import com.example.demo.ViewModelClass.HomeViewModel
-import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.delay
 import org.junit.After
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -29,13 +23,9 @@ class LoginScreenKtTest {
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
-    private lateinit var navController: TestNavHostController
-
-    private lateinit var viewModel: HomeViewModel
-
     @Before
     fun setUp() {
-
+        println("Before test case execution")
         // Render the Compose UI
         composeTestRule.activity.setContent {
             var navController = rememberNavController()
@@ -53,13 +43,14 @@ class LoginScreenKtTest {
 
     @After
     fun tearDown() {
+        println("After test case execution")
     }
 
     @Test
     fun loginLabelTest()
     {
         composeTestRule.onNodeWithText("Login your Account").assertIsDisplayed()
-        takeScreenshot()
+
     }
 
     @Test
@@ -80,6 +71,7 @@ class LoginScreenKtTest {
         composeTestRule.onNodeWithText("Next")
             .isDisplayed( )
 
+        Thread.sleep(5000)
         // Test Case 2: Trigger navigation to Screen2
         /*composeTestRule.onNodeWithText("Next").performClick()
 
