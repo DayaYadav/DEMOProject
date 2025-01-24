@@ -20,6 +20,7 @@ material = "1.8.0-alpha08"
 uiTestJunit4 = "1.8.0-alpha08"
 junitJupiter = "5.8.1"
 androidxEspressoCore = "3.5.0"
+navigationTesting = "2.8.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,6 +49,7 @@ androidx-material = { group = "androidx.compose.material", name = "material", ve
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "uiTestJunit4" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
 androidx-test-espresso-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspressoCore" }
+androidx-navigation-testing = { group = "androidx.navigation", name = "navigation-testing", version.ref = "navigationTesting" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

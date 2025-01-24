@@ -1,14 +1,22 @@
 package com.example.demo.View
 
+import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.navigation.NavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.testing.TestNavHostController
+import androidx.test.core.app.takeScreenshot
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.example.demo.Activity.MainActivity
+import com.example.demo.UtillClass.Screen
 import org.junit.Assert.*
 
 import org.junit.After
@@ -18,34 +26,38 @@ import org.junit.Test
 
 class LoginScreenKtTest {
 
-    @JvmField
-    @Rule
-    var activityScenarioRule: ActivityScenarioRule<MainActivity> =
-        ActivityScenarioRule(MainActivity::class.java)
-
     @get:Rule
-    val composeTestRule = createComposeRule()
 
+    val composeTestRule = createAndroidComposeRule<MainActivity>()
+
+    private lateinit var navController: TestNavHostController
 
     @Before
     fun setUp() {
-      // val navController = rememberNavController()
+
         // Render the Compose UI
-        composeTestRule.setContent {
+        composeTestRule.activity.setContent {
             // Call the entry point composable function
-            LoginScreen(
-                navController = TODO()
-            )
+            NavHost(navController = navController, startDestination = Screen.LoginScreen.route) {
+
+                composable(Screen.LoginScreen.route) { LoginScreen(navController) } // Your composable screen
+
+            }
 
         }
     }
 
-    private fun NavController(context: ActivityScenarioRule<MainActivity>) {
 
-    }
 
     @After
     fun tearDown() {
+    }
+
+    @Test
+    fun loginLabelTest()
+    {
+        composeTestRule.onNodeWithText("Login your Account").assertIsDisplayed()
+        takeScreenshot()
     }
 
     @Test
@@ -54,10 +66,6 @@ class LoginScreenKtTest {
         val userName = "User001"
         val password = "password"
 
-      /*  composeTestRule.setContent {
-            LoginScreen()
-        }
-*/
         // Find the email TextField and perform text input
         composeTestRule.onNodeWithText("Enter your name")
             .performTextInput(userName)
