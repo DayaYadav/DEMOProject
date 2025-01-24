@@ -80,6 +80,12 @@ class LoginScreenKtTest {
         composeTestRule.onNodeWithText("Next")
             .isDisplayed( )
 
+        // Test Case 2: Trigger navigation to Screen2
+        /*composeTestRule.onNodeWithText("Next").performClick()
+
+        // Verify that Screen2 is displayed
+        composeTestRule.onNodeWithText("Welcome").assertIsDisplayed()*/
+
         // Assert that the login action is triggered with the correct credentials
         // For demonstration purposes, we'll just check that the entered email and password are non-empty.
         assertTrue(userName.isNotEmpty())

@@ -30,6 +30,8 @@ class UserDetailScreenKtTest {
 
     @Before
     fun setUp() {
+        // Mock our View Model to stub out calls later
+      //  viewModel = mock()
         // Render the Compose UI
         composeTestRule.activity.setContent {
             var navController = rememberNavController()
