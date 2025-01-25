@@ -9,7 +9,7 @@ import androidx.navigation.navArgument
 import com.example.demo.view.AllPlantsScreen
 import com.example.demo.view.LoginScreen
 import com.example.demo.view.UserDetailScreen
-import com.example.demo.viewModelClass.HomeViewModel
+import com.example.demo.ViewModelClass.HomeViewModel
 
 /**
  * File to declare all screens with there expected arguments

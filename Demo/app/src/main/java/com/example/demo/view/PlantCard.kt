@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
@@ -28,7 +29,7 @@ fun PlantCard(name: String, description: String, image: Int) {
             // The space between each card and the other
             .padding(10.dp)
             .fillMaxWidth()
-            .wrapContentHeight(),
+            .wrapContentHeight().testTag("cardTest"),
         shape = MaterialTheme.shapes.medium,
         elevation = 5.dp,
         backgroundColor = MaterialTheme.colors.surface,

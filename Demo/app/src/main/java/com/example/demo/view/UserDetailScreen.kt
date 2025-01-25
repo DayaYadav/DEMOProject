@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -32,7 +33,7 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.NavHostController
 import com.example.demo.R
 import com.example.demo.utilClass.Screen
-import com.example.demo.viewModelClass.HomeViewModel
+import com.example.demo.ViewModelClass.HomeViewModel
 
 /**
  * User Details Screen Composable function
@@ -47,7 +48,7 @@ fun UserDetailScreen(text: String?, viewModel: HomeViewModel, navController: Nav
     val userPostsIS = viewModel.userPostLiveData.observeAsState()
 
 
-    Surface(modifier = Modifier.fillMaxSize()) {
+    Surface(modifier = Modifier.fillMaxSize().testTag("UserDetailTestTag")) {
 
         Column() {
             Box(
@@ -58,7 +59,7 @@ fun UserDetailScreen(text: String?, viewModel: HomeViewModel, navController: Nav
                 contentAlignment = Alignment.CenterStart
 
             ) {
-                Row(modifier = Modifier.padding(horizontal = 10.dp)) {
+                Row(modifier = Modifier.padding(horizontal = 10.dp).testTag("DetailScrTag")) {
                     Text(
                         text = "Welcome: ",
                         color = Color.White,

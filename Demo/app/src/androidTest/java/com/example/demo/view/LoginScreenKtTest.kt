@@ -4,7 +4,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.isDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -12,16 +14,22 @@ import androidx.navigation.compose.rememberNavController
 import androidx.test.core.app.takeScreenshot
 import com.example.demo.activity.MainActivity
 import com.example.demo.utilClass.Screen
+import com.example.demo.ViewModelClass.HomeViewModel
 import org.junit.After
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-
+/**
+ * Instrumented test for login screen
+ * Date: 24-01-2025
+ */
 class LoginScreenKtTest {
 
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
+    private var viewModel = HomeViewModel()
+    private val mDelayTime =2000
 
     @Before
     fun setUp() {
@@ -33,6 +41,9 @@ class LoginScreenKtTest {
             NavHost(navController = navController, startDestination = Screen.LoginScreen.route) {
 
                 composable(Screen.LoginScreen.route) { LoginScreen(navController) } // Your composable screen
+
+                composable(Screen.DetailsScreen.route) { UserDetailScreen("Daya",viewModel,navController) } // Your composable screen
+
 
             }
 
@@ -68,22 +79,25 @@ class LoginScreenKtTest {
         composeTestRule.onNodeWithText("Enter your password")
             .performTextInput(password)
 
+        Thread.sleep(mDelayTime.toLong())
+
+        assertTrue(userName.isNotEmpty())
+        assertTrue(password.isNotEmpty())
+
+
         // Find the ENTER button and perform a click
         composeTestRule.onNodeWithText("Next")
             .isDisplayed( )
 
-        Thread.sleep(5000)
+        Thread.sleep(mDelayTime.toLong())
         // Test Case 2: Trigger navigation to Screen2
-        /*composeTestRule.onNodeWithText("Next").performClick()
+        composeTestRule.onNodeWithText("Next").performClick()
 
         // Verify that Screen2 is displayed
-        composeTestRule.onNodeWithText("Welcome").assertIsDisplayed()*/
+        composeTestRule.onNodeWithTag("UserDetailTestTag").assertIsDisplayed()
 
-        // Assert that the login action is triggered with the correct credentials
-        // For demonstration purposes, we'll just check that the entered email and password are non-empty.
-        assertTrue(userName.isNotEmpty())
-        assertTrue(password.isNotEmpty())
 
+        Thread.sleep(mDelayTime.toLong())
         takeScreenshot()
     }
 

@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.ViewModelProvider
 import com.example.demo.utilClass.NavigationStack
-import com.example.demo.viewModelClass.HomeViewModel
+import com.example.demo.ViewModelClass.HomeViewModel
 import com.example.demo.ui.theme.DemoTheme
 
 /**
