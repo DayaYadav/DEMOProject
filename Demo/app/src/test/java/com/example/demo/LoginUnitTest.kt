@@ -2,8 +2,8 @@ package com.example.demo
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.ext.junit.rules.ActivityScenarioRule
-import com.example.demo.Activity.MainActivity
-import com.example.demo.UtillClass.CommonUtillClass
+import com.example.demo.activity.MainActivity
+import com.example.demo.utilClass.CommonUtillClass
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before

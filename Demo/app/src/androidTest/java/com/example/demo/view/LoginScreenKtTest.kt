@@ -1,9 +1,6 @@
-package com.example.demo.View
+package com.example.demo.view
 
-import android.content.ClipboardManager
 import androidx.activity.compose.setContent
-import androidx.compose.ui.platform.LocalClipboard
-import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.isDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -13,8 +10,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.test.core.app.takeScreenshot
-import com.example.demo.Activity.MainActivity
-import com.example.demo.UtillClass.Screen
+import com.example.demo.activity.MainActivity
+import com.example.demo.utilClass.Screen
 import org.junit.After
 import org.junit.Assert.assertTrue
 import org.junit.Before

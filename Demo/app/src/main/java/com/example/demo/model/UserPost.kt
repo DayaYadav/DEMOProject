@@ -1,3 +1,3 @@
-package com.example.demo.Model
+package com.example.demo.model
 
 class UserPost : ArrayList<UserPostItem>()

@@ -1,4 +1,4 @@
-package com.example.demo.View
+package com.example.demo.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -17,7 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
-import com.example.demo.UtillClass.plants
+import com.example.demo.utilClass.plants
 
 /**
  * Display list of plants in list with title/description/image

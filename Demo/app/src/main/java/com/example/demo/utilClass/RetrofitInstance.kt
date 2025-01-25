@@ -1,6 +1,6 @@
-package com.example.demo.UtillClass
+package com.example.demo.utilClass
 
-import com.example.demo.Interface.UserDataAPI
+import com.example.demo.listener.UserDataAPI
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

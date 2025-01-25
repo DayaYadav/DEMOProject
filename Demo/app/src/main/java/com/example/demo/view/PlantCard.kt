@@ -1,4 +1,4 @@
-package com.example.demo.View
+package com.example.demo.view
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

@@ -1,4 +1,4 @@
-package com.example.demo.View
+package com.example.demo.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,8 +31,8 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavHostController
 import com.example.demo.R
-import com.example.demo.UtillClass.Screen
-import com.example.demo.ViewModelClass.HomeViewModel
+import com.example.demo.utilClass.Screen
+import com.example.demo.viewModelClass.HomeViewModel
 
 /**
  * User Details Screen Composable function

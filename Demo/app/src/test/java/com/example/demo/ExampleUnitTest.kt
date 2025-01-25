@@ -2,7 +2,7 @@ package com.example.demo
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.ext.junit.rules.ActivityScenarioRule
-import com.example.demo.Activity.MainActivity
+import com.example.demo.activity.MainActivity
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test

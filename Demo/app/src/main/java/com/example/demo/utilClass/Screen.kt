@@ -1,4 +1,4 @@
-package com.example.demo.UtillClass
+package com.example.demo.utilClass
 
 sealed class Screen (val route: String){
 

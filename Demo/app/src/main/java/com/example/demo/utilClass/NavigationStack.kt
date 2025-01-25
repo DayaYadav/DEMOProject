@@ -1,4 +1,4 @@
-package com.example.demo.UtillClass
+package com.example.demo.utilClass
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
@@ -6,10 +6,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.demo.View.AllPlantsScreen
-import com.example.demo.View.LoginScreen
-import com.example.demo.View.UserDetailScreen
-import com.example.demo.ViewModelClass.HomeViewModel
+import com.example.demo.view.AllPlantsScreen
+import com.example.demo.view.LoginScreen
+import com.example.demo.view.UserDetailScreen
+import com.example.demo.viewModelClass.HomeViewModel
 
 /**
  * File to declare all screens with there expected arguments

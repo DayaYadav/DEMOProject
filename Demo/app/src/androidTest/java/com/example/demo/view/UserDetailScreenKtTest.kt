@@ -1,20 +1,16 @@
-package com.example.demo.View
+package com.example.demo.view
 
 import androidx.activity.compose.setContent
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.performClick
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.testing.TestNavHostController
-import androidx.test.core.app.takeScreenshot
-import com.example.demo.Activity.MainActivity
-import com.example.demo.UtillClass.Screen
-import com.example.demo.ViewModelClass.HomeViewModel
-import org.junit.Assert.*
+import com.example.demo.activity.MainActivity
+import com.example.demo.utilClass.Screen
+import com.example.demo.viewModelClass.HomeViewModel
 
 import org.junit.After
 import org.junit.Before

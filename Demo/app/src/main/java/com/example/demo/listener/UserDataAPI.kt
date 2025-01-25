@@ -1,7 +1,7 @@
-package com.example.demo.Interface
+package com.example.demo.listener
 
-import com.example.demo.Model.UserDataResponse
-import com.example.demo.Model.UserPost
+import com.example.demo.model.UserDataResponse
+import com.example.demo.model.UserPost
 import retrofit2.Call
 import retrofit2.http.GET
 

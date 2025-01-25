@@ -1,4 +1,4 @@
-package com.example.demo.View
+package com.example.demo.view
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -27,8 +27,8 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import com.example.demo.R
-import com.example.demo.UtillClass.CommonUtillClass
-import com.example.demo.UtillClass.Screen
+import com.example.demo.utilClass.CommonUtillClass
+import com.example.demo.utilClass.Screen
 
 /**
  * Login Screen Composable function
