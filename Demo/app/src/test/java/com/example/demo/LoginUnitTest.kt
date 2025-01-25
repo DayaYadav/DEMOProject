@@ -3,7 +3,7 @@ package com.example.demo
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.example.demo.activity.MainActivity
-import com.example.demo.utilClass.CommonUtillClass
+import com.example.demo.utilClass.CommonUtilClass
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -35,7 +35,7 @@ class LoginUnitTest {
 
     @Test
     fun ValidateInputStringTest() {
-        var result = CommonUtillClass.ValidateInputString("Hello", 10)
+        var result = CommonUtilClass.ValidateInputString("Hello", 10)
 
         assertEquals(true, result)
 
@@ -44,7 +44,7 @@ class LoginUnitTest {
 
     @Test
     fun ValidateInputStringTestfalse() {
-        var result = CommonUtillClass.ValidateInputString("Hello ,Good Morning", 10)
+        var result = CommonUtilClass.ValidateInputString("Hello ,Good Morning", 10)
 
         assertEquals(
             false, result
@@ -55,7 +55,7 @@ class LoginUnitTest {
 
     @Test
     fun ValidateBlankInputString() {
-        var result = CommonUtillClass.ValidateInputString("", 10)
+        var result = CommonUtilClass.ValidateInputString("", 10)
 
         assertEquals(
             false, result

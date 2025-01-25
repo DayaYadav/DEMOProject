@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import com.example.demo.R
-import com.example.demo.utilClass.CommonUtillClass
+import com.example.demo.utilClass.CommonUtilClass
 import com.example.demo.utilClass.Screen
 
 /**
@@ -81,7 +81,7 @@ fun LoginScreen(navController: NavController) {
                         maxLines = 12,
 
                         onValueChange = {
-                            if(!CommonUtillClass.ValidateInputString(it,mMaxUserNameLen))
+                            if(!CommonUtilClass.ValidateInputString(it,mMaxUserNameLen))
                             {
                                 Toast.makeText(mContext,"You can not enter more then $mMaxUserNameLen characters",Toast.LENGTH_SHORT).show()
                             }else{
@@ -101,7 +101,7 @@ fun LoginScreen(navController: NavController) {
                     OutlinedTextField(
                         value = mPassword.value,
                         onValueChange = {
-                            if (!CommonUtillClass.ValidateInputString(it, mMaxPasswordLen)) {
+                            if (!CommonUtilClass.ValidateInputString(it, mMaxPasswordLen)) {
                                 Toast.makeText(
                                     mContext,
                                     "You can not enter more then $mMaxPasswordLen characters",
@@ -137,7 +137,7 @@ fun LoginScreen(navController: NavController) {
                         if (mUsername.value.isNotEmpty() and mPassword.value.isNotEmpty()) {
                             navController.navigate(route = Screen.DetailsScreen.route + "?text=${mUsername.value}")
                         }else{
-                            if (!CommonUtillClass.ValidateInputString(mUsername.value,0) || CommonUtillClass.ValidateInputString(mPassword.value,0)) {
+                            if (!CommonUtilClass.ValidateInputString(mUsername.value,0) || CommonUtilClass.ValidateInputString(mPassword.value,0)) {
 
                                 Toast.makeText(mContext, ContextCompat.getString(
                                     mContext,

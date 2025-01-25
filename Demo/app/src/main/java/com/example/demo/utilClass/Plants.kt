@@ -4,6 +4,10 @@ package com.example.demo.utilClass
 import com.example.demo.R
 import com.example.plantsincosmetics.model.data.Plant
 
+/**
+ * static list of data
+ */
+
 val plants = listOf(
     Plant(
         1,

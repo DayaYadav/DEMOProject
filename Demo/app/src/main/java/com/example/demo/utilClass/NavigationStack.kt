@@ -28,14 +28,7 @@ fun NavigationStack(viewModel: HomeViewModel) {
             LoginScreen(navController = navController)
         }
         composable(
-            route = Screen.DetailsScreen.route + "?text={text}",
-            arguments = listOf(
-                navArgument("text") {
-                    type = NavType.StringType
-                    nullable = true
-                }
-            )
-        ) {
+            route = Screen.DetailsScreen.route + "?text={text}") {
             UserDetailScreen(text = it.arguments?.getString("text"), viewModel, navController)
         }
         composable(route = Screen.PlantScreen.route) {

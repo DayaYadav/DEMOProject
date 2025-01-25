@@ -34,51 +34,7 @@ class HomeViewModel : ViewModel() {
         viewModelScope.launch {
             getUserDataDetails()
         }
-
-
     }
-
-
-    /**
-     * Function to launch coroutine to fetch userdata
-     */
-    fun getUserPost() {
-        _isLoading.postValue(true)
-        viewModelScope.launch {
-            getUserPosts()
-        }
-
-
-    }
-
-
-    /**
-     * Function to call API to fetch user data from the server
-     */
-    private fun getUserPosts() {
-        RetrofitInstance.api.getUserPost().enqueue(object : Callback<UserPost> {
-            override fun onResponse(
-                call: Call<UserPost>,
-                response: Response<UserPost>
-            ) {
-                if (response.body() != null) {
-                    userPostLiveData.value = response.body()
-                    _isLoading.postValue(false)
-                } else {
-                    return
-                }
-            }
-
-            override fun onFailure(call: Call<UserPost>, t: Throwable) {
-
-                Log.d("TAG", t.message.toString())
-            }
-
-
-        }
-        )
-    }
-
 
     /**
      * Function to call API to fetch user data from the server
@@ -98,14 +54,12 @@ class HomeViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<UserDataResponse>, t: Throwable) {
-
+                //TODO handle API failure scenario
                 Log.d("TAG", t.message.toString())
             }
 
         }
         )
     }
-
-
 }
 

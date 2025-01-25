@@ -1,5 +1,8 @@
 package com.example.demo.utilClass
 
+/**
+ * Class to declare all screens
+ */
 sealed class Screen(val route: String) {
     object SplashScreen : Screen(ScreenName.SPLASH.name)
     object LoginScreen : Screen(ScreenName.LOGIN.name)
