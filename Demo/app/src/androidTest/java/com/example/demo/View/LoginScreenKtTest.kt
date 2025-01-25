@@ -1,6 +1,9 @@
 package com.example.demo.View
 
+import android.content.ClipboardManager
 import androidx.activity.compose.setContent
+import androidx.compose.ui.platform.LocalClipboard
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.isDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -58,6 +61,7 @@ class LoginScreenKtTest {
 
         val userName = "User001"
         val password = "password"
+
 
         // Find the email TextField and perform text input
         composeTestRule.onNodeWithText("Enter your name")

@@ -8,9 +8,6 @@
       <SelectionState runConfigName="LoginScreenKtTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="AllPlantsScreenKtTest">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="varifyLabelTest()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
@@ -18,6 +15,9 @@
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="Tests in 'com.example.demo.View'">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="loginLabelTest()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
