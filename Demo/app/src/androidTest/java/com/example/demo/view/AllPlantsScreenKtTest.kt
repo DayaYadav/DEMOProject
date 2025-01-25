@@ -16,6 +16,10 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+/**
+ * Instrumented test for Plant list screen
+ * Date: 24-01-2025
+ */
 
 @ExperimentalTestApi
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.O)
@@ -36,7 +40,6 @@ class AllPlantsScreenKtTest {
     @Test
     fun plantListTest() {
         composeTestRule.onNodeWithTag("MyTesting").isDisplayed()
-       // assert(true)
     }
 
       @Test

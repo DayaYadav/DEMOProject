@@ -3,29 +3,24 @@ package com.example.demo.view
 import androidx.activity.compose.setContent
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
-import androidx.compose.ui.test.filterToOne
-import androidx.compose.ui.test.hasTestTag
-import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.isDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onChildren
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import androidx.compose.ui.test.performScrollToNode
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.test.core.app.takeScreenshot
+import com.example.demo.ViewModelClass.HomeViewModel
 import com.example.demo.activity.MainActivity
 import com.example.demo.utilClass.Screen
-import com.example.demo.ViewModelClass.HomeViewModel
-
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+
 /**
  * Instrumented test for user detail screen
  * Date: 24-01-2025
