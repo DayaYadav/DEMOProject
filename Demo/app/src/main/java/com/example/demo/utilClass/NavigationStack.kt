@@ -10,6 +10,7 @@ import com.example.demo.view.AllPlantsScreen
 import com.example.demo.view.LoginScreen
 import com.example.demo.view.UserDetailScreen
 import com.example.demo.ViewModelClass.HomeViewModel
+import com.example.demo.view.SplashScreen
 
 /**
  * File to declare all screens with there expected arguments
@@ -18,24 +19,27 @@ import com.example.demo.ViewModelClass.HomeViewModel
 @Composable
 fun NavigationStack(viewModel: HomeViewModel) {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Screen.LoginScreen.route)
+    NavHost(navController = navController, startDestination = Screen.SplashScreen.route)
     {
+        composable(route = Screen.SplashScreen.route) {
+            SplashScreen(navController = navController)
+        }
         composable(route = Screen.LoginScreen.route) {
-        LoginScreen(navController = navController)
+            LoginScreen(navController = navController)
         }
         composable(
-        route = Screen.DetailsScreen.route + "?text={text}",
-        arguments = listOf(
-        navArgument("text") {
-        type = NavType.StringType
-        nullable = true
-        }
-        )
+            route = Screen.DetailsScreen.route + "?text={text}",
+            arguments = listOf(
+                navArgument("text") {
+                    type = NavType.StringType
+                    nullable = true
+                }
+            )
         ) {
-            UserDetailScreen(text = it.arguments?.getString("text"),viewModel,navController)
+            UserDetailScreen(text = it.arguments?.getString("text"), viewModel, navController)
         }
         composable(route = Screen.PlantScreen.route) {
             AllPlantsScreen()
         }
-        }
+    }
 }
