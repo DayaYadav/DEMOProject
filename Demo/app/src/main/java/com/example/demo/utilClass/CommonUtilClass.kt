@@ -1,7 +1,7 @@
 package com.example.demo.utilClass
 
 /**
- * Common Utill class to declare constants
+ * Common Util class to declare constants
  */
 
 class CommonUtilClass {

@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.demo.model.UserDataResponse
-import com.example.demo.model.UserPost
 import com.example.demo.utilClass.RetrofitInstance
 import kotlinx.coroutines.launch
 import retrofit2.Call
@@ -20,7 +19,6 @@ import retrofit2.Response
 class HomeViewModel : ViewModel() {
 
     var userLiveData = MutableLiveData<UserDataResponse>()
-    var userPostLiveData = MutableLiveData<UserPost>()
 
     private val _isLoading = MutableLiveData<Boolean>(false)
 
@@ -54,7 +52,6 @@ class HomeViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<UserDataResponse>, t: Throwable) {
-                //TODO handle API failure scenario
                 Log.d("TAG", t.message.toString())
             }
 

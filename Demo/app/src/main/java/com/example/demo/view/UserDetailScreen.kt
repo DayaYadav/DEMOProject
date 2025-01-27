@@ -45,8 +45,6 @@ fun UserDetailScreen(text: String?, viewModel: HomeViewModel, navController: Nav
     val mContext = LocalContext.current
     val isLoading =viewModel.isLoading.observeAsState()
     val userDetails = viewModel.userLiveData.observeAsState()
-    val userPostsIS = viewModel.userPostLiveData.observeAsState()
-
 
     Surface(modifier = Modifier.fillMaxSize().testTag("UserDetailTestTag")) {
 
