@@ -38,11 +38,11 @@ class LoginScreenKtTest {
         composeTestRule.activity.setContent {
             var navController = rememberNavController()
             // Call the entry point composable function
-            NavHost(navController = navController, startDestination = Screen.LoginScreen.route) {
+            NavHost(navController = navController, startDestination =        Screen.LoginScreen.route) {
 
                 composable(Screen.LoginScreen.route) { LoginScreen(navController) } // Your composable screen
 
-                composable(Screen.DetailsScreen.route) { UserDetailScreen("Daya",viewModel,navController) } // Your composable screen
+                composable(Screen.DetailsScreen.route) { UserDetailScreen("Hello",viewModel,navController) } // Your composable screen
 
 
             }
